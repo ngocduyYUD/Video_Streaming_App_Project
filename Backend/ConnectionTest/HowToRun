@@ -1,0 +1,3 @@
+cc -c -I/usr/include/postgresql server.c
+cc -pthread -o server server.o -L/usr/bin -lpq
+./server 

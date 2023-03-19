@@ -1,0 +1,15 @@
+{
+  "name": "server_nodejs",
+  "version": "1.0.0",
+  "description": "test build server using nodejs",
+  "main": "server.js",
+  "scripts": {
+    "test": "run",
+    "start": "node server.js"
+  },
+  "author": "hoanganh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

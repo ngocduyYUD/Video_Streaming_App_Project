@@ -1,0 +1,38 @@
+import * as React from "react";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import { CardActionArea } from "@mui/material";
+
+export default function VideoCard(props) {
+  const { title, thumbnail, description } = props;
+  return (
+    <Card
+      sx={{
+        maxWidth: 345,
+        boxShadow: "5px 5px 3px 3px rgba(0, 0, 0, 0.2)",
+      }}
+      style={{
+        border: "0px solid black",
+      }}
+    >
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="140"
+          image={thumbnail}
+          alt="green iguana"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            {title}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            {description ? description : "No description"}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
+  );
+}
